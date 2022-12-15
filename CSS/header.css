@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
 
 body {
-    background-color: #68bbe3;
+    background-color: #055c9d;
 }
 
 /* Navigation bar styles */
@@ -9,9 +9,9 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
-    background-color: #000000;
+    background-color: #003060;
     height: 20px;
   }
   
@@ -63,11 +63,11 @@ nav {
   }
 
   button:hover{
-    background-color: #003060;
+    background-color: #000000;
   }
 
   a:hover {
-    color: #0e86d4;
+    color: #000000;
   }
   
 

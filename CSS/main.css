@@ -1,18 +1,55 @@
-div {
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+
+
+/* Styling the blog-card*/
+.blog-card {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 150px;
+    border-radius: 25px;
+    height: 800px;
+    width: 980px;
+    margin-bottom: 50px;
+    background-color: #68bbe3;
+}
+/* Styling all headers */
+h3 {
+    font-size: 30px;
+    font-style: italic;
+    margin: 10px;
+    margin-left: 10px;
+    font-family: "Nova Mono",sans-serif;
+}
+.blog-image {
+    height: 465px;
+    width: 372px;
+    margin: 10px;
+    border-radius: 25px;
+}
+.blog-paragraph {
+    font-size: 20px;
+}
+
+/* Styling the video-card*/
+.video-card {
+    display: flex;
+    flex-direction: column;
     margin-top: 20px;
     margin-left: 150px;
     border-radius: 25px;
     height: 600px;
-    width: 985px;
-    background-color: rgb(252, 244, 244);
+    width: 980px;
+    background-color: #68bbe3;
 }
-
 video {
     height: 550px;
     width: auto;
     border-radius: 25px;
-    margin-top: 2px;
+    margin-top: -12px;
 }
+
+
+
+
 
