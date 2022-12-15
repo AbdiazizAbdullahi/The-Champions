@@ -8,7 +8,7 @@
     margin-top: 20px;
     margin-left: 150px;
     border-radius: 25px;
-    height: 800px;
+    height: 1300px;
     width: 980px;
     margin-bottom: 50px;
     background-color: #68bbe3;
@@ -22,13 +22,19 @@ h3 {
     font-family: "Nova Mono",sans-serif;
 }
 .blog-image {
-    height: 465px;
-    width: 372px;
+    height: 520px;
+    width: 924px;
     margin: 10px;
+    margin-left: 27px;
     border-radius: 25px;
 }
 .blog-paragraph {
     font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 25px;
+    background-color: #003060;
+    color: #ffffff;
+    border-radius: 5px;
 }
 
 /* Styling the video-card*/
