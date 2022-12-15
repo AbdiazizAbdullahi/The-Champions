@@ -1,0 +1,18 @@
+div {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 150px;
+    border-radius: 25px;
+    height: 600px;
+    width: 985px;
+    background-color: rgb(252, 244, 244);
+}
+
+video {
+    height: 550px;
+    width: auto;
+    border-radius: 25px;
+    margin-top: 2px;
+}
+
