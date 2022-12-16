@@ -14,7 +14,7 @@
     background-color: #68bbe3;
 }
 /* Styling all headers */
-h3 {
+.headers {
     font-size: 30px;
     font-style: italic;
     margin: 10px;
@@ -55,6 +55,79 @@ video {
     margin-top: -12px;
 }
 
+/* Styling the player-card*/
+.players-list {
+    list-style-type: none;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.link {
+    font-family: 'Nova Mono', sans-serif;
+    display: flex;
+    justify-content: center;
+    color: aliceblue;
+}
+
+.frame {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .player-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 220px;
+    height: 360px;
+    background-color: #003060;
+    border: 1px solid  #ffffff;
+    margin: 20px;
+    box-shadow: 20px rgba(179, 27, 27, 0.2);
+    transition: 0.3s;
+    border-radius: 15px;
+  }
+  
+  .player-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .player-image {
+    width: auto;
+    height: 150px;
+    display: flex;
+    justify-self: center;
+    margin-top: 20px;
+    background-color: #68bbe3;
+    border-radius: 50%;
+  }
+  
+  .player-name {
+    text-align: center;
+    margin: -20px;
+    margin-top: -10px;
+    color: aliceblue;
+  }
+  
+  .player-age,
+  .player-position,
+  .player-goals,
+  .player-assist {
+    font-size: 16px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    margin-left: 5px;
+    color: aliceblue;
+  }
+  
+  .font {
+    font-family: "Nova Mono",sans-serif;
+  }
+  
 
 
 

@@ -9,12 +9,21 @@
             "Assist": 8
         },
         {
-            "Name": "   Phil Foden",
-            "Image": "/Project/foden.png",
-            "Age": 22,
-            "Position": "Attacker",
-            "Goals": 9,
-            "Assist": 5
+            "Name": "Ilkay Gundogan",
+            "Image": "/Project/gundo.png",
+            "Age": 32,
+            "Position": "Midfielder",
+            "Goals": 8,
+            "Assist": 4
+        },
+        
+        {
+            "Name": "Joao Cancelo",
+            "Image": "/Project/cancelo.png",
+            "Age": 28,
+            "Position": "Defender",
+            "Goals": 1,
+            "Assist": 7
         },
         {
             "Name": "Riyad Mahrez",
@@ -25,20 +34,20 @@
             "Assist": 5
         },
         {
+            "Name": "   Phil Foden",
+            "Image": "/Project/foden.png",
+            "Age": 22,
+            "Position": "Attacker",
+            "Goals": 9,
+            "Assist": 5
+        },
+        {
             "Name": "Jack Grealish",
             "Image": "/Project/grealish.png",
             "Age": 27,
             "Position": "Attacker",
             "Goals": 3,
             "Assist": 3
-        },
-        {
-            "Name": "Gabriel Jesus",
-            "Image": "/Project/jesus.png",
-            "Age": 25,
-            "Position": "Attacker",
-            "Goals": 8,
-            "Assist": 6
         },
         {
             "Name": "Raheem Sterling",
@@ -52,14 +61,6 @@
             "Name": "Bernardo Silva",
             "Image": "/Project/bernado.png",
             "Age": 28,
-            "Position": "Midfielder",
-            "Goals": 8,
-            "Assist": 4
-        },
-        {
-            "Name": "Ilkay Gundogan",
-            "Image": "/Project/gundo.png",
-            "Age": 32,
             "Position": "Midfielder",
             "Goals": 8,
             "Assist": 4
@@ -113,14 +114,6 @@
             "Assist": 1
         },
         {
-            "Name": "Joao Cancelo",
-            "Image": "/Project/cancelo.png",
-            "Age": 28,
-            "Position": "Defender",
-            "Goals": 1,
-            "Assist": 7
-        },
-        {
             "Name": "Aymeric Laporte",
             "Image": "/Project/laporte.png",
             "Age": 28,
@@ -135,14 +128,6 @@
             "Position": "Defender",
             "Goals": 2,
             "Assist": 1
-        },
-        {
-            "Name": "Zinchenko",
-            "Image": "/Project/zinchenko.png",
-            "Age": 26,
-            "Position": "Defender",
-            "Goals": 3,
-            "Assist": 2
         },
         {
             "Name": "Ederson",
@@ -161,9 +146,5 @@
             "Assist": 0
         }
     ]
-
-
-
-
 
 }
