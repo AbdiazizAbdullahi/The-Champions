@@ -13,6 +13,10 @@ nav {
     border-radius: 5px;
     background-color: #003060;
     height: 20px;
+    border-radius: 15px;
+background: linear-gradient(145deg, #003367, #002b56);
+box-shadow:  12px 12px 24px #001326,
+             -12px -12px 24px #004d9a;
   }
   
   /* Brand name styles */
