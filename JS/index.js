@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    function fetchData(){
-        fetch('http://localhost:3000/players')
+    URL = 'http://localhost:3000/players'
+  
+  
+  function fetchData(){
+        fetch(URL)
         .then(res => res.json())
         .then(data => renderPlayers(data))
     }
@@ -62,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     
     function fetchAwardData(){
-        fetch('http://localhost:3000/players')
+        fetch(URL)
         .then(res => res.json())
         .then(data => renderAwards(data))
     } 
@@ -141,11 +144,60 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    
 
+  // Search function and fetching the data
 
+  function fetchSearchData() {
+    fetch(URL)
+      .then(res => res.json())
+      .then(data => searchPlayer(data));
+  }
+  
+  function searchPlayer(data) {
+    // Get the input and button elements
+    const input = document.getElementById('input');
+    const search = document.getElementById('button');
+    const searchCard = document.createElement('div');
+    searchCard.classList.add('search-card')
+  
+    search.addEventListener('click', () => {
+      // Remove the existing elements
+      blog.remove();
+      video.remove();
+      loginDiv.remove();
+      playerFrame.remove();
+
+      searchCard.innerHTML = ''
       
-    
+  
+      // Find the player in the data based on the input value
+      const player = data.find(look => look.Name.toLowerCase() === input.value.toLowerCase());
+  
+      if (player) {
+        // Create a new search card element and populate it with the player data
+        
+        searchCard.innerHTML = `
+        <img class="player-image" src="${player.Image}"/>
+        <h3 class="player-name font">${player.Name}</h3>
+        <h5 class="player-age font">Age: ${player.Age}</h5>
+        <h5 class="player-position font">Position: ${player.Position}</h5>
+        <h5 class="player-goals font">Goals: ${player.Goals}</h5> 
+        <h5 class="player-assist font">Assist: ${player.Assist}</h5>
+        `;
+  
+        // Add the search card element to the page
+        searchFrame.appendChild(searchCard);
+        body.appendChild(searchFrame);
+      } else {
+        searchCard.innerHTML = ` <h2 class='search-header' >Player Not Found</h2>`
+
+        searchFrame.appendChild(searchCard);
+        body.appendChild(searchFrame);
+      }
+    });
+  }
+      
+    fetchSearchData()
     fetchAwardData()
     fetchData()
     
