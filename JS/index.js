@@ -7,26 +7,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     const body = document.body
+
     const playerFrame = document.createElement('div');
     playerFrame.classList.add('frame');
+
     const voteFrame = document.createElement('div');
     voteFrame.classList.add('vote-frame');
+
+    const searchFrame = document.createElement('div');
+    searchFrame.classList.add('search-frame');
+
     const blog = document.getElementById('blog');
     const video = document.getElementById('video');
+
+    const li1 = document.getElementById('players-list');
+    const li2 = document.getElementById('voting');
 
 
 
 
     function renderPlayers(data){
         
-        const li1 = document.getElementById('players-list');
         
-        
-
-       
-
-
-
         data.forEach( player => {
         const playerCard = document.createElement('div');
         playerCard.classList.add('player-card');
@@ -41,30 +43,21 @@ document.addEventListener('DOMContentLoaded', () => {
         playerFrame.appendChild(playerCard)
 
         
-
+        
         li1.addEventListener('click', () => {
             blog.remove();
             video.remove();
+            loginDiv.remove();
+            voteFrame.remove();
             li1.appendChild(playerFrame);
             body.appendChild(li1)
         })
 
-
         
         
         
-            
-
-
-
+        
         });
-
-        
-       ;
-
-
-        
-
     }
     
     
@@ -78,11 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         
         function renderAwards(data){
-            const li2 = document.getElementById('voting');
+            
             const voteDiv = document.getElementById('vote-header')
             voteFrame.appendChild(voteDiv)
             const newData = data.slice(0,4);
-            console.log(newData)
             newData.forEach( vote => {
                 const voteCard = document.createElement('div');
             voteCard.classList.add('vote-card');
@@ -114,6 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
         li2.addEventListener('click', () => {
             blog.remove();
             video.remove();
+            loginDiv.remove();
+            playerFrame.remove();
             li2.appendChild(voteFrame);
             body.appendChild(li2);
             });
@@ -124,16 +118,35 @@ document.addEventListener('DOMContentLoaded', () => {
     
     }
 
+    // Login page DOM manupulation
+    const login = document.getElementById('login-btn');
+    const loginDiv = document.getElementById('login-div');
+    login.addEventListener('click', () => {
+      blog.remove();
+      video.remove();
+      li1.remove();
+      li2.remove();
+      login.appendChild(loginDiv);
+      body.appendChild(loginDiv)
+    })
+    const loginBtn = document.getElementById('login');
+    loginBtn.addEventListener('click', () => {
+      loginDiv.remove();
+
+      body.appendChild(li1)
+      body.appendChild(li2)
+      body.appendChild(blog);
+      body.appendChild(video)
+      
+    });
 
 
-    fetchAwardData()
-    fetchData()
     
 
 
-
-
-
-
-
+      
+    
+    fetchAwardData()
+    fetchData()
+    
 })
