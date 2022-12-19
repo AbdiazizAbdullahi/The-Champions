@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(data => renderPlayers(data))
     }
     
-    const body = document.body
+    const body = document.body;
 
     const playerFrame = document.createElement('div');
-    playerFrame.classList.add('frame');
+    playerFrame.classList.add('player-frame');
 
     const voteFrame = document.createElement('div');
     voteFrame.classList.add('vote-frame');
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const video = document.getElementById('video');
 
     const li1 = document.getElementById('players-list');
-    const li2 = document.getElementById('voting');
+    const li2 = document.getElementById('voting'); 
 
 
 
@@ -48,12 +48,15 @@ document.addEventListener('DOMContentLoaded', () => {
         
         
         li1.addEventListener('click', () => {
-            blog.remove();
-            video.remove();
-            loginDiv.remove();
-            voteFrame.remove();
-            li1.appendChild(playerFrame);
-            body.appendChild(li1)
+          voteFrame.style.display = 'none'
+          blog.style.display = 'none'
+          video.style.display = 'none'
+          loginDiv.style.display = 'none'
+          searchFrame.style.display = 'none'
+
+            //li1.appendChild(playerFrame);
+            body.appendChild(playerFrame);
+          playerFrame.style.display = 'block'
         })
 
         
@@ -107,12 +110,15 @@ document.addEventListener('DOMContentLoaded', () => {
         voteCard.appendChild(btn);
 
         li2.addEventListener('click', () => {
-            blog.remove();
-            video.remove();
-            loginDiv.remove();
-            playerFrame.remove();
-            li2.appendChild(voteFrame);
-            body.appendChild(li2);
+          loginDiv.style.display = 'none'
+          blog.style.display = 'none'
+          video.style.display = 'none'
+          playerFrame.style.display = 'none'
+          searchFrame.style.display = 'none'
+
+            //li2.appendChild(voteFrame);
+          body.appendChild(voteFrame);
+          voteFrame.style.display = 'block'
             });
 
         })
@@ -124,24 +130,34 @@ document.addEventListener('DOMContentLoaded', () => {
     // Login page DOM manupulation
     const login = document.getElementById('login-btn');
     const loginDiv = document.getElementById('login-div');
+    //login.appendChild(loginDiv);
+    loginDiv.style.display = 'none'
     login.addEventListener('click', () => {
-      blog.remove();
-      video.remove();
-      li1.remove();
-      li2.remove();
-      login.appendChild(loginDiv);
-      body.appendChild(loginDiv)
+      voteFrame.style.display = 'none'
+      blog.style.display = 'none'
+      video.style.display = 'none'
+      playerFrame.style.display = 'none'
+      searchFrame.style.display = 'none'
+      
+      body.appendChild(loginDiv);
+      loginDiv.style.display = 'block'
+      
     })
     const loginBtn = document.getElementById('login');
     loginBtn.addEventListener('click', () => {
-      loginDiv.remove();
+      voteFrame.style.display = 'none'
+      loginDiv.style.display = 'none'
+      searchFrame.style.display = 'none'
+      playerFrame.style.display = 'none'
 
-      body.appendChild(li1)
-      body.appendChild(li2)
-      body.appendChild(blog);
-      body.appendChild(video)
+      body.appendChild();
+      blog.style.display = 'block'
+      video.style.display = 'block'
       
-    });
+      // main.appendChild(blog);
+      // main.appendChild(video)
+      
+    })
 
 
 
@@ -164,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Remove the existing elements
       blog.remove();
       video.remove();
-      loginDiv.remove();
+      //loginDiv.remove();
       playerFrame.remove();
 
       searchCard.innerHTML = ''

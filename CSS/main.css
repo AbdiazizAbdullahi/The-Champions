@@ -1,41 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
 
+body {
+}
 
 /* Styling the blog-card*/
 .blog-card {
   display: flex;
   flex-direction: column;
     margin-top: 20px;
-    margin-left: 150px;
-    border-radius: 25px;
-    height: 1430px;
-    width: 980px;
+    margin-left: 180px;
+    height: 125vh;
+    width: 70vw;
     margin-bottom: 50px;
-    background-color: #68bbe3;
+    border-radius: 25px;
+background: #003060;
+box-shadow: inset 9px 9px 18px #001326,
+            inset -9px -9px 18px #004d9a;
 }
 /* Styling all headers */
 .headers {
-    font-size: 30px;
+    font-size: 20px;
     font-style: italic;
     margin: 10px;
     margin-left: 10px;
     font-family: "Nova Mono",sans-serif;
+    color: #d4e6f5;
 }
 .blog-image {
-    height: 520px;
-    width: 924px;
+    height: 70vh;
+    width: 65vw;
     margin: 10px;
     margin-left: 27px;
     border-radius: 25px;
+background: linear-gradient(145deg, #003367, #002b56);
+box-shadow:  9px 9px 18px #001326,
+             -9px -9px 18px #004d9a;
 }
 .blog-paragraph {
-    font-size: 20px;
+    font-size: 17px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 05px;
-    background-color: #003060;
+    margin: 20px;
     color: #d4e6f5;
-    border-radius: 5px;
-}
+    border-radius: 10px;
+background: linear-gradient(145deg, #003367, #002b56);
+box-shadow:  9px 9px 18px #001326,
+             -9px -9px 18px #004d9a;
+}  
 
 /* Styling the video-card*/
 .video-card {
@@ -43,13 +53,15 @@
     flex-direction: column;
     margin-top: 20px;
     margin-left: 150px;
+    height: 58vh;
+    width: 75vw;
     border-radius: 25px;
-    height: 600px;
-    width: 980px;
-    background-color: #68bbe3;
+background: #003060;
+box-shadow: inset 9px 9px 18px #001326,
+            inset -9px -9px 18px #004d9a;
 }
 video {
-    height: 550px;
+    height: auto;
     width: auto;
     border-radius: 25px;
     margin-top: -12px;
@@ -71,7 +83,7 @@ video {
     color: #d4e6f5;
 }
 
-.frame {
+.player-frame {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -81,7 +93,7 @@ video {
   .player-card {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    gap: 20px; 
     width: 220px;
     height: 360px;
     background-color: #003060;
@@ -317,5 +329,8 @@ box-shadow: inset 8px 8px 12px #001326,
   display: flex;
   align-items: center;
   color: #d4e6f5;
-  
+}
+.button {
+  border-radius: 10px;
+  height: 28px;
 }
