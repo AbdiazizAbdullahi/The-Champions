@@ -1,12 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     URL = 'https://abdiazizabdullahi.github.io/The-Champions-db.json/db.json'
-  
+    
   
   function fetchData(){
+    
         fetch(URL)
         .then(res => res.json())
-        .then(players => renderPlayers(players))
+        .then(data => renderPlayers(data))
     }
     
     const body = document.body;
@@ -38,10 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    function renderPlayers(players){
+    function renderPlayers(data){
+        let data = mancity.players;
         
-        
-        players.forEach( player => {
+        data.forEach( player => {
         const playerCard = document.createElement('div');
         playerCard.classList.add('player-card');
         playerCard.innerHTML = `
@@ -80,17 +81,18 @@ document.addEventListener('DOMContentLoaded', () => {
     function fetchAwardData(){
         fetch(URL)
         .then(res => res.json())
-        .then(players => renderAwards(players))
+        .then(data => renderAwards(data))
     } 
         
         
         
         
-        function renderAwards(players){
+        function renderAwards(data){
+          let data = mancity.players;
             
             const voteDiv = document.getElementById('vote-header')
             voteFrame.appendChild(voteDiv)
-            const newData = players.slice(0,4); //changed some staff
+            const newData = data.slice(0,4); //changed some staff
             newData.forEach( vote => {
                 const voteCard = document.createElement('div');
             voteCard.classList.add('vote-card');
