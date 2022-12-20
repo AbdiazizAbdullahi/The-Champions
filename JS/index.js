@@ -11,6 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const body = document.body;
 
+    const voteContainer = document.createElement('div');
+    voteContainer.classList.add('container-p');
+
+    const playerContainer = document.createElement('div');
+    playerContainer.classList.add('container-p');
+
+    const searchContainer = document.createElement('div');
+    //searchContainer.classList.add('')
+
     const playerFrame = document.createElement('div');
     playerFrame.classList.add('player-frame');
 
@@ -43,20 +52,21 @@ document.addEventListener('DOMContentLoaded', () => {
            <h5 class="player-goals font">Goals: ${player.Goals}</h5> 
            <h5 class="player-assist font">Assist: ${player.Assist}</h5>
         `
-        playerFrame.appendChild(playerCard)
+        playerFrame.appendChild(playerCard);
 
         
+    playerContainer.appendChild(playerFrame)
         
         li1.addEventListener('click', () => {
-          voteFrame.style.display = 'none'
+          voteContainer.style.display = 'none'
           blog.style.display = 'none'
           video.style.display = 'none'
           loginDiv.style.display = 'none'
-          searchFrame.style.display = 'none'
+          searchContainer.style.display = 'none'
 
             //li1.appendChild(playerFrame);
-            body.appendChild(playerFrame);
-          playerFrame.style.display = 'block'
+            body.appendChild(playerContainer);
+          playerContainer.style.display = 'block'
         })
 
         
@@ -109,16 +119,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         voteCard.appendChild(btn);
 
+        
+        voteContainer.appendChild(voteFrame)
+
         li2.addEventListener('click', () => {
           loginDiv.style.display = 'none'
           blog.style.display = 'none'
           video.style.display = 'none'
-          playerFrame.style.display = 'none'
-          searchFrame.style.display = 'none'
+          playerContainer.style.display = 'none'
+          searchContainer.style.display = 'none'
 
             //li2.appendChild(voteFrame);
-          body.appendChild(voteFrame);
-          voteFrame.style.display = 'block'
+          body.appendChild(voteContainer);
+          voteContainer.style.display = 'block'
             });
 
         })
@@ -133,11 +146,11 @@ document.addEventListener('DOMContentLoaded', () => {
     //login.appendChild(loginDiv);
     loginDiv.style.display = 'none'
     login.addEventListener('click', () => {
-      voteFrame.style.display = 'none'
+      voteContainer.style.display = 'none'
       blog.style.display = 'none'
       video.style.display = 'none'
-      playerFrame.style.display = 'none'
-      searchFrame.style.display = 'none'
+      playerContainer.style.display = 'none'
+      searchContainer.style.display = 'none'
       
       body.appendChild(loginDiv);
       loginDiv.style.display = 'block'
@@ -145,17 +158,14 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     const loginBtn = document.getElementById('login');
     loginBtn.addEventListener('click', () => {
-      voteFrame.style.display = 'none'
+      voteContainer.style.display = 'none'
       loginDiv.style.display = 'none'
-      searchFrame.style.display = 'none'
-      playerFrame.style.display = 'none'
+      searchContainer.style.display = 'none'
+      playerContainer.style.display = 'none'
 
-      body.appendChild();
+      
       blog.style.display = 'block'
       video.style.display = 'block'
-      
-      // main.appendChild(blog);
-      // main.appendChild(video)
       
     })
 
@@ -178,10 +188,16 @@ document.addEventListener('DOMContentLoaded', () => {
   
     search.addEventListener('click', () => {
       // Remove the existing elements
-      blog.remove();
-      video.remove();
-      //loginDiv.remove();
-      playerFrame.remove();
+      // blog.remove();
+      // video.remove();
+      // //loginDiv.remove();
+      // //playerContainer.remove();
+
+      voteContainer.style.display = 'none'
+      loginDiv.style.display = 'none'
+      playerContainer.style.display = 'none'
+      blog.style.display = 'none'
+      video.style.display = 'none'
 
       searchCard.innerHTML = ''
       
@@ -203,12 +219,17 @@ document.addEventListener('DOMContentLoaded', () => {
   
         // Add the search card element to the page
         searchFrame.appendChild(searchCard);
-        body.appendChild(searchFrame);
+        searchContainer.appendChild(searchFrame)
+        body.appendChild(searchContainer);
+        searchContainer.style.display = 'block'
+
       } else {
         searchCard.innerHTML = ` <h2 class='search-header' >Player Not Found</h2>`
 
         searchFrame.appendChild(searchCard);
-        body.appendChild(searchFrame);
+        searchContainer.appendChild(searchFrame);
+        body.appendChild(searchContainer);
+        searchContainer.style.display = 'block'
       }
     });
   }
