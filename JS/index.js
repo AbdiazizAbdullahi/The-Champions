@@ -1,6 +1,9 @@
+
+URL = 'https://abdiazizabdullahi.github.io/server/db.json'
+
 document.addEventListener('DOMContentLoaded', () => {
 
-    URL = 'https://abdiazizabdullahi.github.io/server/db.json'
+    
     
   const body = document.body;
 
