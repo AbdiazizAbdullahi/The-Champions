@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function fetchData(){
         fetch(URL)
         .then(res => res.json())
-        .then(data => renderPlayers(data))
+        .then(players => renderPlayers(players))
     }
     
     const body = document.body;
@@ -38,10 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    function renderPlayers(data){
+    function renderPlayers(players){
         
         
-        data.forEach( player => {
+        players.forEach( player => {
         const playerCard = document.createElement('div');
         playerCard.classList.add('player-card');
         playerCard.innerHTML = `
@@ -80,17 +80,17 @@ document.addEventListener('DOMContentLoaded', () => {
     function fetchAwardData(){
         fetch(URL)
         .then(res => res.json())
-        .then(data => renderAwards(data))
+        .then(players => renderAwards(players))
     } 
         
         
         
         
-        function renderAwards(data){
+        function renderAwards(players){
             
             const voteDiv = document.getElementById('vote-header')
             voteFrame.appendChild(voteDiv)
-            const newData = data.slice(0,4);
+            const newData = players.slice(0,4); //changed some staff
             newData.forEach( vote => {
                 const voteCard = document.createElement('div');
             voteCard.classList.add('vote-card');
