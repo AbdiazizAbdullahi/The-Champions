@@ -64,6 +64,68 @@ video {
   margin-top: -12px;
 }
 
+/* Styling the feedback-card*/ 
+.feedback-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin-top: 200px;
+  margin-left: 380px;
+  height: 40vh;
+  width: 40vw;
+  background-color: #003060;
+  border-radius: 25px;
+  background: #003060;
+  box-shadow: inset 9px 9px 18px #001326,
+              inset -9px -9px 18px #004d9a;
+}
+.f-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.f1-input {
+  width: 250px;
+  height: 25px;
+  color: #d4e6f5;
+  border-radius: 10px;
+  border: #003060;
+  background: linear-gradient(145deg, #003367, #002b56);
+  box-shadow:  9px 9px 18px #001326,
+              -9px -9px 18px #004d9a;
+}
+.f2-input {
+  width: 250px;
+  height: 25px;
+  color: #d4e6f5;
+  border: #003060;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #003367, #002b56);
+  box-shadow:  9px 9px 18px #001326,
+              -9px -9px 18px #004d9a;
+}
+.f-head {
+  margin-left: 210px;
+  font-size: 26px;
+  color: #d4e6f5;
+}
+.f-btn {
+  font-size: 17px;
+  border: #003060;
+  color: #d4e6f5;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #003367, #002b56);
+  box-shadow:  9px 9px 18px #001326,
+              -9px -9px 18px #004d9a;
+}
+.f-btn:hover {
+  border-radius: 10px;
+  background: linear-gradient(145deg, #0f8fe3, #0d79bf);
+  box-shadow:  9px 9px 18px #063655,
+              -9px -9px 18px #16d6ff;
+}
+
 /* Styling the player-card*/
 .players-list {
   display: flex;

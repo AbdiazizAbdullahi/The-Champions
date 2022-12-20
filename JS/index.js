@@ -1,8 +1,5 @@
 
 URL = 'https://abdiazizabdullahi.github.io/server/db.json'
-//'http://localhost:3000/players'
-
-
 
 
   const body = document.body;
@@ -27,6 +24,7 @@ URL = 'https://abdiazizabdullahi.github.io/server/db.json'
 
     const blog = document.getElementById('blog');
     const video = document.getElementById('video');
+    const feedback = document.getElementById('feedback-card')
 
     const li1 = document.getElementById('players-list');
     const li2 = document.getElementById('voting'); 
@@ -66,6 +64,7 @@ URL = 'https://abdiazizabdullahi.github.io/server/db.json'
           voteContainer.style.display = 'none'
           blog.style.display = 'none'
           video.style.display = 'none'
+          feedback.style.display = 'none'
           loginDiv.style.display = 'none'
           searchContainer.style.display = 'none'
 
@@ -130,8 +129,9 @@ URL = 'https://abdiazizabdullahi.github.io/server/db.json'
           video.style.display = 'none'
           playerContainer.style.display = 'none'
           searchContainer.style.display = 'none'
+          feedback.style.display = 'none'
 
-            //li2.appendChild(voteFrame);
+          
           body.appendChild(voteContainer);
           voteContainer.style.display = 'block'
           });
@@ -151,6 +151,7 @@ URL = 'https://abdiazizabdullahi.github.io/server/db.json'
       video.style.display = 'none'
       playerContainer.style.display = 'none'
       searchContainer.style.display = 'none'
+      feedback.style.display = 'none'
       
       body.appendChild(loginDiv);
       loginDiv.style.display = 'block'
@@ -166,6 +167,7 @@ URL = 'https://abdiazizabdullahi.github.io/server/db.json'
       
       blog.style.display = 'block'
       video.style.display = 'block'
+      feedback.style.display = 'block'
       
     })
 
@@ -188,17 +190,13 @@ URL = 'https://abdiazizabdullahi.github.io/server/db.json'
     searchCard.classList.add('search-card')
   
     search.addEventListener('click', () => {
-      // Remove the existing elements
-      // blog.remove();
-      // video.remove();
-      // //loginDiv.remove();
-      // //playerContainer.remove();
 
       voteContainer.style.display = 'none'
       loginDiv.style.display = 'none'
       playerContainer.style.display = 'none'
       blog.style.display = 'none'
       video.style.display = 'none'
+      feedback.style.display = 'none'
 
       searchCard.innerHTML = ''
       
