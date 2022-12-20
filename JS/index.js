@@ -2,15 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     URL = 'https://abdiazizabdullahi.github.io/server/db.json'
     
-  
-  function fetchData(){
-    
-        fetch(URL)
-        .then(res => res.json())
-        .then(data => renderPlayers(data.players))
-    }
-    
-    const body = document.body;
+  const body = document.body;
 
     const voteContainer = document.createElement('div');
     voteContainer.classList.add('container-p');
@@ -39,7 +31,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    function renderPlayers(){
+
+  function fetchData(){
+    
+        fetch(URL)
+        .then(res => res.json())
+        .then(data => {
+         // renderPlayers(data))
+    //}
+    
+    
+
+
+
+
+    //function renderPlayers(){
         
         data.forEach( player => {
         const playerCard = document.createElement('div');
@@ -71,18 +77,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         
         
+      })  
         
-        
-        });
-    }
+      });
+    }  // i added a bracket
     
     
     function fetchAwardData(){
         fetch(URL)
         .then(res => res.json())
-        .then(data => renderAwards(data.players))
-    }
-        function renderAwards(data){
+        .then(data => {
+          //renderAwards(data))
+    //}
+        //function renderAwards(){
             
             const voteDiv = document.getElementById('vote-header')
             voteFrame.appendChild(voteDiv)
@@ -132,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         })
     
-        
+      }); //added now   
     
     }
 
