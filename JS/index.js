@@ -1,5 +1,6 @@
 
-URL = 'https://abdiazizabdullahi.github.io/server/db.json'
+URL = 'http://localhost:3000/players'
+//'https://api.jsonbin.io/v3/b/639ca68fdfc68e59d56a08a1'
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -39,16 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
         fetch(URL)
         .then(res => res.json())
-        .then(data => {
-         // renderPlayers(data))
-    //}
+        .then(data => renderPlayers(data))
+  }
     
-    
-
-
-
-
-    //function renderPlayers(){
+    function renderPlayers(data){
         
         data.forEach( player => {
         const playerCard = document.createElement('div');
@@ -82,17 +77,16 @@ document.addEventListener('DOMContentLoaded', () => {
         
       })  
         
-      });
-    }  // i added a bracket
+      
+    }  
     
     
     function fetchAwardData(){
         fetch(URL)
         .then(res => res.json())
-        .then(data => {
-          //renderAwards(data))
-    //}
-        //function renderAwards(){
+        .then(data => renderAwards(data))
+    }
+        function renderAwards(data){
             
             const voteDiv = document.getElementById('vote-header')
             voteFrame.appendChild(voteDiv)
@@ -138,11 +132,9 @@ document.addEventListener('DOMContentLoaded', () => {
             //li2.appendChild(voteFrame);
           body.appendChild(voteContainer);
           voteContainer.style.display = 'block'
-            });
+          });
 
-        })
-    
-      }); //added now   
+        }); 
     
     }
 
@@ -182,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function fetchSearchData() {
     fetch(URL)
       .then(res => res.json())
-      .then(data => searchPlayer(data.players));
+      .then(data => searchPlayer(data));
   }
   
   function searchPlayer(data) {
