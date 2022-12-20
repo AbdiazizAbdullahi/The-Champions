@@ -1,5 +1,7 @@
 
 URL = 'https://abdiazizabdullahi.github.io/server/db.json'
+//'http://localhost:3000/players'
+
 
 
 
@@ -37,7 +39,9 @@ URL = 'https://abdiazizabdullahi.github.io/server/db.json'
     
         fetch(URL)
         .then(res => res.json())
-        .then(data => renderPlayers(data['players']))
+        .then(object => { let data = object['players']
+        renderPlayers(data)})
+
   }
     
     function renderPlayers(data){
@@ -81,7 +85,8 @@ URL = 'https://abdiazizabdullahi.github.io/server/db.json'
     function fetchAwardData(){
         fetch(URL)
         .then(res => res.json())
-        .then(data => renderAwards(data['players']))
+        .then(object => { const data = object['players']
+        renderAwards(data)})
     }
         function renderAwards(data){
             
@@ -171,7 +176,8 @@ URL = 'https://abdiazizabdullahi.github.io/server/db.json'
   function fetchSearchData() {
     fetch(URL)
       .then(res => res.json())
-      .then(data => searchPlayer(data['players']));
+      .then(object => {const data = object['players']
+      searchPlayer(data)});
   }
   
   function searchPlayer(data) {
