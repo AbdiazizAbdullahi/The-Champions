@@ -37,7 +37,7 @@ URL = 'https://api.jsonbin.io/v3/b/639ca68fdfc68e59d56a08a1'
     
         fetch(URL)
         .then(res => res.json())
-        .then(data => renderPlayers(data))
+        .then(data => renderPlayers(data['players']))
   }
     
     function renderPlayers(data){
@@ -81,13 +81,13 @@ URL = 'https://api.jsonbin.io/v3/b/639ca68fdfc68e59d56a08a1'
     function fetchAwardData(){
         fetch(URL)
         .then(res => res.json())
-        .then(data => renderAwards(data))
+        .then(data => renderAwards(data['players']))
     }
         function renderAwards(data){
             
             const voteDiv = document.getElementById('vote-header')
             voteFrame.appendChild(voteDiv)
-            const newData = data.slice(0,4); //changed some staff
+            const newData = data.slice(0,4); 
             newData.forEach( vote => {
                 const voteCard = document.createElement('div');
             voteCard.classList.add('vote-card');
@@ -171,7 +171,7 @@ URL = 'https://api.jsonbin.io/v3/b/639ca68fdfc68e59d56a08a1'
   function fetchSearchData() {
     fetch(URL)
       .then(res => res.json())
-      .then(data => searchPlayer(data));
+      .then(data => searchPlayer(data['players']));
   }
   
   function searchPlayer(data) {
