@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    URL = 'https://api.jsonbin.io/v3/b/639ca68fdfc68e59d56a08a1'
+    URL = 'https://abdiazizabdullahi.github.io/The-Champions-db.json/db.json'
   
   
   function fetchData(){
