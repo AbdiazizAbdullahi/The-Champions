@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    URL = 'https://abdiazizabdullahi.github.io/The-Champions-db.json/db.json'
+    URL = 'https://abdiazizabdullahi.github.io/server/db.json'
     
   
   function fetchData(){
     
         fetch(URL)
         .then(res => res.json())
-        .then(data => renderPlayers(data))
+        .then(data => renderPlayers(data.players))
     }
     
     const body = document.body;
@@ -39,8 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    function renderPlayers(data){
-        let data = mancity.players;
+    function renderPlayers(){
         
         data.forEach( player => {
         const playerCard = document.createElement('div');
@@ -81,14 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function fetchAwardData(){
         fetch(URL)
         .then(res => res.json())
-        .then(data => renderAwards(data))
-    } 
-        
-        
-        
-        
+        .then(data => renderAwards(data.players))
+    }
         function renderAwards(data){
-          let data = mancity.players;
             
             const voteDiv = document.getElementById('vote-header')
             voteFrame.appendChild(voteDiv)
@@ -178,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function fetchSearchData() {
     fetch(URL)
       .then(res => res.json())
-      .then(data => searchPlayer(data));
+      .then(data => searchPlayer(data.players));
   }
   
   function searchPlayer(data) {
