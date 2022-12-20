@@ -1,10 +1,8 @@
 
 URL = 'https://api.jsonbin.io/v3/b/639ca68fdfc68e59d56a08a1'
 
-document.addEventListener('DOMContentLoaded', () => {
 
-    
-    
+
   const body = document.body;
 
     const voteContainer = document.createElement('div');
@@ -235,4 +233,3 @@ document.addEventListener('DOMContentLoaded', () => {
     fetchAwardData()
     fetchData()
     
-})
