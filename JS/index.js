@@ -30,7 +30,10 @@ const feedback = document.getElementById('feedback-card')
 
 // Calling nav-bar elements
 const li1 = document.getElementById('players-list');
-const li2 = document.getElementById('voting'); 
+const li2 = document.getElementById('voting');
+
+// Feedback page elements
+
 
 
 function fetchData(){  
@@ -130,13 +133,13 @@ function renderAwards(data){
   }); 
 }
 
-// Login page DOM manupulation
+// Login page event listener
 const login = document.getElementById('login-btn');
 const loginDiv = document.getElementById('login-div');
 //login.appendChild(loginDiv);
 loginDiv.style.display = 'none'
 login.addEventListener('click', () => {
-voteContainer.style.display = 'none'
+  voteContainer.style.display = 'none'
   blog.style.display = 'none'
   video.style.display = 'none'
   playerContainer.style.display = 'none'
@@ -155,28 +158,28 @@ loginBtn.addEventListener('click', () => {
   loginDiv.style.display = 'none'
   searchContainer.style.display = 'none'
   playerContainer.style.display = 'none'
+  feedback.style.display = 'none'
   blog.style.display = 'block'
   video.style.display = 'block'
-  feedback.style.display = 'block'
 })
 
-// Event listener that returns you home page
+// Event listener that returns you home page when clicked on the brand name
 const flata = document.getElementById('flata');
 flata.addEventListener('click', () => {
   voteContainer.style.display = 'none'
   loginDiv.style.display = 'none'
   searchContainer.style.display = 'none'
   playerContainer.style.display = 'none'
+  feedback.style.display = 'none'
+
   blog.style.display = 'block'
   video.style.display = 'block'
-  feedback.style.display = 'block'
 })
-
-
 
 // Event listener for the feedback form
 const fbbtn = document.getElementById('fbbtn');
 const fbform = document.getElementById('fbform');
+feedback.style.display = 'none';
 fbbtn.addEventListener('click', () => {
   // reset the form input
   fbform.reset();
@@ -185,8 +188,23 @@ fbbtn.addEventListener('click', () => {
   alert('Thanks for the feedback!');
 })
 
+// Feedback page event listener
+const fbpage = document.getElementById('fb-page');
+fbpage.addEventListener('click', () => {
+  voteContainer.style.display = 'none'
+  blog.style.display = 'none'
+  video.style.display = 'none'
+  playerContainer.style.display = 'none'
+  searchContainer.style.display = 'none'
+  feedback.style.display = 'none'
+  loginDiv.style.display = 'none'
 
-  // Search function and fetching the data
+  feedback.appendChild(fbform);
+  body.appendChild(feedback);
+  feedback.style.display = 'block'
+})
+  
+// Search function and fetching the data
 
 function fetchSearchData() {
   fetch(URL)
